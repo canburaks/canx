@@ -1,0 +1,21 @@
+{
+  "name": "stitches",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0"
+  },
+  "peerDependencies": {
+    "react": "^18",
+    "react-dom": "^18",
+    "@stitches/react": "^1.2.8"
+  },
+  "scripts": {
+    "build": "tsc src/*.ts --jsx preserve --outDir dist --target es2015 --module commonjs --declaration --declarationMap --sourceMap"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}
