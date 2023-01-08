@@ -1,0 +1,147 @@
+export declare const lightThemeConfig: {
+    colors: {
+        white: string;
+        crimson: string;
+        pink: string;
+        plum: string;
+        purple: string;
+        violet: string;
+        indigo: string;
+        blue: string;
+        cyan: string;
+        teal: string;
+        green: string;
+        grass: string;
+        orange: string;
+        brown: string;
+        crimsondark: string;
+        pinkdark: string;
+        plumdark: string;
+        purpledark: string;
+        violetdark: string;
+        indigodark: string;
+        bluedark: string;
+        cyandark: string;
+        tealdark: string;
+        greendark: string;
+        grassdark: string;
+        orangedark: string;
+        browndark: string;
+        myblack: string;
+        mypurple: string;
+        neongreen: string;
+        primary: string;
+        primary100: string;
+        primary200: string;
+        primary300: string;
+        primary400: string;
+        primary500: string;
+        primary600: string;
+        primary700: string;
+        primary800: string;
+        primary900: string;
+    };
+    space: {
+        '0': string;
+        '1': string;
+        '2': string;
+        '3': string;
+        '4': string;
+        '5': string;
+        '6': string;
+        none: string;
+        radioWidth: number;
+        radioHeight: number;
+        mainWidth: string;
+        gridWidth: string;
+    };
+    fonts: {
+        inter: string;
+        general: string;
+        cormorantMedium: string;
+        serif: string;
+        sans: string;
+    };
+    breakpoints: {
+        xs: string;
+        sm: string;
+        md: string;
+        lg: string;
+        xl: string;
+        xxl: string;
+    };
+    shadows: {
+        drop1: string;
+        drop2: string;
+        drop3: string;
+        drop4: string;
+        drop5: string;
+        drop6: string;
+        drop7: string;
+        drop8: string;
+        drop9: string;
+        inset0: string;
+        inset1: string;
+        inset2: string;
+        inset3: string;
+        rest: string;
+        focus: string;
+        toggle: string;
+        filter: string;
+    };
+    fontSizes: {
+        xs: string;
+        sm: string;
+        base: string;
+        lg: string;
+        xl: string;
+        h1: string;
+        h2: string;
+        h3: string;
+        h4: string;
+        headline: string;
+    };
+    fontWeights: {
+        light: number;
+        regular: number;
+        medium: number;
+        semi: number;
+        bold: number;
+        extrabold: number;
+        black: number;
+    };
+    letterSpacings: {
+        tighter: string;
+        tight: string;
+        normal: string;
+        wider: string;
+        widest: string;
+    };
+    lineHeights: {
+        shortest: string;
+        short: string;
+        normal: string;
+        tall: string;
+        tallest: string;
+    };
+    radii: {
+        none: any;
+        xs: any;
+        sm: any;
+        md: any;
+        lg: any;
+        xl: any;
+        rounded: any;
+        squircle: string;
+        rem1: string;
+        rem05: string;
+        filter: string;
+    };
+    transitions: {
+        easeInOutQuint: string;
+        easeOutQuint: string;
+        easeInQuint: string;
+        tum: string;
+    };
+};
+//# sourceMappingURL=theme.d.ts.map

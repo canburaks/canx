@@ -1,6 +1,7 @@
 {
-  "name": "stitches",
-  "version": "0.0.0",
+  "name": "@canburaks/stitches",
+  "version": "0.0.3",
+  "description": "Stitches boilerplate for new projects.",
   "main": "dist/index.js",
   "devDependencies": {
     "@types/react": "^18.0.0",
@@ -12,7 +13,8 @@
     "@stitches/react": "^1.2.8"
   },
   "scripts": {
-    "build": "tsc src/*.ts --jsx preserve --outDir dist --target es2015 --module commonjs --declaration --declarationMap --sourceMap"
+    "build": "tsc src/*.ts --jsx preserve --outDir dist --target es2015 --module commonjs --declaration --declarationMap --sourceMap",
+    "publish": "npm publish --no-git-checks"
   },
   "publishConfig": {
     "access": "public"

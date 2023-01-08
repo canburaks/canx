@@ -1,0 +1,1 @@
+{"version":3,"file":"letter-spacings.js","sourceRoot":"","sources":["../../src/constants/letter-spacings.ts"],"names":[],"mappings":";;;AAAa,QAAA,eAAe,GAAG;IAC9B,OAAO,EAAE,GAAG,CAAC,IAAI,IAAI;IACrB,KAAK,EAAE,GAAG,CAAC,IAAI,IAAI;IACnB,MAAM,EAAE,GAAG,CAAC,IAAI;IAChB,IAAI,EAAE,GAAG,IAAI,IAAI;IACjB,KAAK,EAAE,GAAG,IAAI,IAAI;CAClB,CAAC"}
