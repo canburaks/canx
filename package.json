@@ -2,7 +2,9 @@
   "name": "canx",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build:stitches": "cd packages/stitches && npm run build && cd ../.."
+  },
   "private": true,
   "devDependencies": {
     "nx": "15.4.5",

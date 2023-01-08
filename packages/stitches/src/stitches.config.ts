@@ -1,66 +1,88 @@
 // stitches.config.ts
 import { createStitches } from '@stitches/react';
+import type * as Stitches from '@stitches/react';
 import { CONFIG } from './theme/config';
+import { ConfigType } from '@stitches/react/types/config';
 
-type MyStitchesTypes = {
-  styled?: any;
-  css?: Record<string, string> | any;
-  globalCss?: any;
-  theme?: Record<string, string> | any;
-  keyframes?: any;
-  getCssText?: any;
-  globalStyles?: any;
-  config?: any;
-};
-function generateTheme(configs:typeof CONFIG):MyStitchesTypes {
+function generateTheme(configs: typeof CONFIG) {
   const {
     styled,
     css,
+    theme,
+    createTheme,
+    getCssText,
     globalCss,
     keyframes,
-    getCssText,
-    theme,
     config,
-  }: MyStitchesTypes = createStitches({
+    reset,
+  } = createStitches({
     prefix: 'cbs',
     theme: {
-			fontSize:{
-				XS: 	`-${CONFIG.SCALE * CONFIG.SCALE}em`,
-				SM: 	`-${CONFIG.SCALE}em`,
-				BASE: `${1}em`,
-				LG:   `${CONFIG.SCALE }em`,
-				H6: 	`${CONFIG.SCALE * CONFIG.SCALE }em`,
-				H5: 	`${CONFIG.SCALE * CONFIG.SCALE * CONFIG.SCALE}em`,
-				H4: 	`${CONFIG.SCALE * CONFIG.SCALE * CONFIG.SCALE * CONFIG.SCALE }em`,
-				H3: 	`${CONFIG.SCALE * CONFIG.SCALE * CONFIG.SCALE * CONFIG.SCALE}em`,
-				H2: 	`${CONFIG.SCALE * CONFIG.SCALE * CONFIG.SCALE * CONFIG.SCALE * CONFIG.SCALE}em`,
-				H1: 	`${CONFIG.SCALE * CONFIG.SCALE * CONFIG.SCALE * CONFIG.SCALE * CONFIG.SCALE * CONFIG.SCALE }em`,
-				HEADLINE: 	`${CONFIG.SCALE * CONFIG.SCALE * CONFIG.SCALE * CONFIG.SCALE * CONFIG.SCALE * CONFIG.SCALE * CONFIG.SCALE}em`,
-			}
-		},
+      fonts:configs.theme.fonts,
+      fontSize: {
+        XS: `-${configs.scale * configs.scale}em`,
+        SM: `-${configs.scale}em`,
+        BASE: `${1}em`,
+        LG: `${configs.scale}em`,
+        H6: `${configs.scale * configs.scale}em`,
+        H5: `${configs.scale * configs.scale * configs.scale}em`,
+        H4: `${
+          configs.scale * configs.scale * configs.scale * configs.scale
+        }em`,
+        H3: `${
+          configs.scale * configs.scale * configs.scale * configs.scale
+        }em`,
+        H2: `${
+          configs.scale *
+          configs.scale *
+          configs.scale *
+          configs.scale *
+          configs.scale
+        }em`,
+        H1: `${
+          configs.scale *
+          configs.scale *
+          configs.scale *
+          configs.scale *
+          configs.scale *
+          configs.scale
+        }em`,
+        HEADLINE: `${
+          configs.scale *
+          configs.scale *
+          configs.scale *
+          configs.scale *
+          configs.scale *
+          configs.scale *
+          configs.scale
+        }em`,
+      },
+      fontWeights: configs.theme.fontWeights,
+      lineHeights: configs.theme.lineHeights,
+      radii: configs.theme.radii,
+      space: configs.theme.spaces,
+    },
     media: {
-      xs: `(min-width: ${CONFIG.SCREENS.XS}px)`,
-      sm: `(min-width: ${CONFIG.SCREENS.SM}px)`,
-      md: `(min-width: ${CONFIG.SCREENS.MD}px)`,
-      lg: `(min-width: ${CONFIG.SCREENS.LG}px)`,
-      xl: `(min-width: ${CONFIG.SCREENS.XL}px)`,
-      xxl: `(min-width: ${CONFIG.SCREENS.XXL}px)`,
+      xs: `(min-width: ${configs.screens.XS}px)`,
+      sm: `(min-width: ${configs.screens.SM}px)`,
+      md: `(min-width: ${configs.screens.MD}px)`,
+      lg: `(min-width: ${configs.screens.LG}px)`,
+      xl: `(min-width: ${configs.screens.XL}px)`,
+      xxl: `(min-width:${configs.screens.XXL}px)`,
     },
-    utils: {
-      size: (value: any) => ({
-        width: value,
-        height: value,
-      }),
-    },
+
+    utils: configs.utils,
   });
   return {
     styled,
     css,
+    theme,
+    createTheme,
+    getCssText,
     globalCss,
     keyframes,
-    getCssText,
-    theme,
     config,
+    reset,
   };
 }
 
@@ -80,8 +102,10 @@ function generateTheme(configs:typeof CONFIG):MyStitchesTypes {
 //   },
 // });
 
-const stitches = (configs:typeof CONFIG) => generateTheme({...CONFIG, ...configs});
+const stitches = (configs: typeof CONFIG) =>
+  generateTheme({ ...CONFIG, ...configs });
 
-export const { styled, css, globalCss, keyframes, getCssText, theme, config } = stitches(CONFIG);
+export const { styled, css, globalCss, keyframes, getCssText, theme, config } =
+  stitches(CONFIG);
 
 export default stitches;

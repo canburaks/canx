@@ -37,6 +37,7 @@ const flexboxVariants = css({
 		},
 		width: {
 			full: { width: '100%' },
+      screen:{width: "100vw"},
 			auto: { width: 'auto' },
 		},
 		maxWidth: {
